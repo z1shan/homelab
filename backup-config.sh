@@ -17,7 +17,6 @@ cp /home/beszel/docker-compose.yml "$REPO/beszel/docker-compose.yml"
 
 # Stage only the configuration files
 git add \
-    immich/immich-docker-compose.yml \
     glance/glance.yml \
     glance/home.yml \
     glance/docker-compose.yml \
