@@ -1,1 +1,2 @@
 bash: */5: No such file or directory
+cp: cannot stat '/home/zishan/glance/config/docker-compose.yml': No such file or directory
