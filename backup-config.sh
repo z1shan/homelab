@@ -9,7 +9,6 @@ cd "$REPO" || exit 1
 git pull --rebase origin main || exit 1
 
 # Copy configuration files
-cp /mnt/immichssf/docker-compose.yml "$REPO/immich/immich-docker-compose.yml"
 cp /home/zishan/glance/config/glance.yml "$REPO/glance/glance.yml"
 cp /home/zishan/glance/config/home.yml "$REPO/glance/home.yml"
 cp /home/zishan/glance/docker-compose.yml "$REPO/glance/docker-compose.yml"
