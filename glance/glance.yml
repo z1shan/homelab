@@ -46,6 +46,9 @@ pages:
           - type: monitor
             title: Service Status
             sites:
+              - title: Glance
+                url: http://192.168.10.2:8099
+                icon: si:google
               - title: Immich
                 url: http://192.168.10.2:2283
                 icon: si:immich
