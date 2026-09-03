@@ -3,10 +3,17 @@ pages:
     columns:
       - size: small
         widgets:
+          - type: clock
+            hour-format: 24h
+            timezones:
+              - timezone: Asia/Kolkata
+                label: Pune
+              - timezone: Asia/Kuala_Lumpur
+                label: Kuala Lumpur
           - type: dns-stats
             service: pihole-v6
             url: http://192.168.10.2:8081
-            password: aaaKGooy/06r9+EwAJni8M3FbbREhMEpaysiieA+leU=
+            password: CHZff7wUJfAE1bJqskur3vU02Vvf3TFuugGFmnmknZw=
           - type: custom-api
             title: Immich stats
             cache: 1d
@@ -41,6 +48,7 @@ pages:
             pull-requests-limit: 5
             issues-limit: 3
             commits-limit: 3
+            show-thumbnails: true
       - size: full
         widgets:
           - type: monitor
@@ -62,10 +70,22 @@ pages:
                 url: http://192.168.10.2:8090
                 icon: si:statuspage
                 widgets:
+              - title: Paperlessngx
+                url: http://192.168.10.2:8001
+                icon: si:paperlessngx
+                widgets:
           - type: group
             widgets:
               - type: hacker-news
               - type: lobsters
+          - type: docker-containers
+            containers:
+            container_name_1:
+            name: Beszel
+            description: Monitoring
+            url: http://192.168.10.2:8090
+            icon: si:Beszel
+            hide: false
           - type: videos
             channels:
               - UCXuqSBlHAE6Xw-yeJA0Tunw # Linus Tech Tips
@@ -75,6 +95,7 @@ pages:
               - UCIxQ54On7bLJKcmgnyWOejQ # NetBird
               - UCjSEJkpGbcZhvo0lr-44X_w # TechHut
               - UCgdTVe88YVSrOZ9qKumhULQ # Hardware Haven
+              - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
           - type: group
             widgets:
               - type: reddit
@@ -94,10 +115,10 @@ pages:
                 show-thumbnails: true
               - type: reddit
                 subreddit: hackintosh
-                show-thumbnails: true
-
       - size: small
         widgets:
+          - type: calendar
+            first-day-of-week: monday
           - type: bookmarks
             groups:
               - title: Work
@@ -122,21 +143,4 @@ pages:
                   - title: ChatGPT
                     url: https://chat.com
                     icon: si:chatgpt
-              - title: Media
-                links:
-                  - title: Immich
-                    url: http://192.168.10.2:2283
-                    icon: si:immich
-              - title: Network
-                links:
-                  - title: Pi-hole Admin
-                    url: http://192.168.10.2:8081/admin
-                    icon: si:pihole
-                  - title: Nginx Proxy Manager
-                    url: http://192.168.10.2:81
-                    icon: si:nginxproxymanager
-              - title: Monitoring
-                links:
-                  - title: Beszel
-                    url: http://192.168.10.2:8090
-                    icon: si:statuspage
+          - type: to-do
