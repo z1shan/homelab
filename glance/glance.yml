@@ -13,13 +13,13 @@ pages:
           - type: dns-stats
             service: pihole-v6
             url: http://192.168.10.2:8081
-            password: xxxxx
+            password: CHZff7wUJfAE1bJqskur3vU02Vvf3TFuugGFmnmknZw=
           - type: custom-api
             title: Immich stats
             cache: 1d
             url: http://192.168.10.2:2283/api/server/statistics
             headers:
-              x-api-key: xxxx
+              x-api-key: LpywV46zza2GmIstqgJaQ5K2Z6zOtQCWje9rQIizbxM
               Accept: application/json
             template: |
               <div class="flex justify-between text-center">
@@ -94,7 +94,7 @@ pages:
               - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
               - UCzgA9CBrIXPtkB2yNTTiy1w # Level 2 Jeff
           - type: rss
-            title: 🚨 Security News
+            title: Security News
             style: vertical-list
             limit: 15
             collapse-after: 10
