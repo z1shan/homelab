@@ -13,7 +13,7 @@ cp /home/zishan/glance/config/glance.yml "$REPO/glance/glance.yml"
 cp /home/zishan/glance/config/home.yml "$REPO/glance/home.yml"
 cp /home/zishan/glance/docker-compose.yml "$REPO/glance/docker-compose.yml"
 cp /home/nginxpm/docker-compose.yml "$REPO/nginxpm/docker-compose.yml"
-cp /home/beszel/docker-compose.yml "$REPO/beszel/docker-compose.yml"
+# cp /home/beszel/docker-compose.yml "$REPO/beszel/docker-compose.yml"
 
 # Stage only the configuration files
 git add \
