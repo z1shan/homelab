@@ -4,7 +4,7 @@ pages:
       - size: small
         widgets:
           - type: clock
-            hour-format: 24h
+            hour-format: 12h
             timezones:
               - timezone: Asia/Kolkata
                 label: Pune
@@ -74,10 +74,6 @@ pages:
                 url: http://192.168.10.2:8001
                 icon: si:paperlessngx
                 widgets:
-          - type: group
-            widgets:
-              - type: hacker-news
-              - type: lobsters
           - type: docker-containers
             containers:
             container_name_1:
@@ -96,25 +92,30 @@ pages:
               - UCjSEJkpGbcZhvo0lr-44X_w # TechHut
               - UCgdTVe88YVSrOZ9qKumhULQ # Hardware Haven
               - UCOk-gHyjcWZNj3Br4oxwh0A # Techno Tim
+              - UCzgA9CBrIXPtkB2yNTTiy1w # Level 2 Jeff
+          - type: rss
+            title: 🚨 Security News
+            style: vertical-list
+            limit: 15
+            collapse-after: 10
+            cache: 30m
+            feeds:
+            - url: https://feeds.feedburner.com/TheHackersNews
+              title: The Hacker News
+              limit: 4
+            - url: https://www.bleepingcomputer.com/feed/
+              title: BleepingComputer
+              limit: 5
+            - url: https://krebsonsecurity.com/feed/
+              title: KrebsOnSecurity
+              limit: 3
+            - url: https://isc.sans.edu/rssfeed.xml
+              title: SANS ISC
+              limit: 3
           - type: group
             widgets:
-              - type: reddit
-                subreddit: technology
-                show-thumbnails: true
-              - type: reddit
-                subreddit: selfhosted
-                show-thumbnails: true
-              - type: reddit
-                subreddit: homelab
-                show-thumbnails: true
-              - type: reddit
-                subreddit: homenetworking
-                show-thumbnails: true
-              - type: reddit
-                subreddit: sffpc
-                show-thumbnails: true
-              - type: reddit
-                subreddit: hackintosh
+              - type: hacker-news
+              - type: lobsters
       - size: small
         widgets:
           - type: calendar
