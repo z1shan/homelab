@@ -169,6 +169,8 @@ hint: have locally. This is usually caused by another repository pushing to
 hint: the same ref. If you want to integrate the remote changes, use
 hint: 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 cp: cannot create regular file '/home/zishan/github/homelab/immich/immich-docker-compose.yml': No such file or directory
 cp: cannot stat '/home/beszel/docker-compose.yml': No such file or directory
 [main d24591d] Auto-update configs - 2026-09-03 00:00:01
@@ -183,3 +185,20 @@ hint: use 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 /bin/sh: 1: /home/zishan/github/homelab/backup-configs.sh: not found
 /bin/sh: 1: /home/zishan/github/homelab/backup-configs.sh: not found
+=======
+=======
+>>>>>>> Stashed changes
+[main 0ca3dfc] Auto-update configs - 2026-09-01 15:00:01
+ 1 file changed, 10 insertions(+)
+To github.com:z1shan/homelab.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:z1shan/homelab.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
