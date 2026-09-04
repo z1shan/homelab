@@ -13,13 +13,13 @@ pages:
           - type: dns-stats
             service: pihole-v6
             url: http://192.168.10.2:8081
-            password: CHZff7wUJfAE1bJqskur3vU02Vvf3TFuugGFmnmknZw=
+            password: xxxxx
           - type: custom-api
             title: Immich stats
             cache: 1d
             url: http://192.168.10.2:2283/api/server/statistics
             headers:
-              x-api-key: LpywV46zza2GmIstqgJaQ5K2Z6zOtQCWje9rQIizbxM
+              x-api-key: xxxx
               Accept: application/json
             template: |
               <div class="flex justify-between text-center">
