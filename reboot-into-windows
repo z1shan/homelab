@@ -1,0 +1,72 @@
+Reboot into Windows from Ubuntu
+A simple way to reboot directly from Ubuntu into Windows on a dual-boot system using GRUB.
+This sets Windows as the one-time boot target. The next normal reboot will return to Ubuntu.
+
+1. Configure GRUB
+Edit:
+sudo nano /etc/default/grub
+Change:
+GRUB_DEFAULT=0
+to:
+GRUB_DEFAULT=saved
+Optional: set a short GRUB timeout:
+GRUB_TIMEOUT=3
+Apply the changes:
+sudo update-grub
+
+2. Find the Windows GRUB Entry
+Run:
+grep -i windows /boot/grub/grub.cfg
+Find the Windows boot entry, for example:
+Windows Boot Manager (on /dev/nvme0n1p1)
+Use the exact name shown on your system.
+
+3. Create the Reboot Script
+Create:
+sudo nano /opt/reboot-into-windows
+Add:
+#!/bin/bash
+/usr/sbin/grub-reboot "Windows Boot Manager (on /dev/nvme0n1p1)"
+/sbin/reboot
+Replace the Windows entry with the one found in the previous step.
+Make the script executable and root-owned:
+sudo chown root:root /opt/reboot-into-windows
+sudo chmod 755 /opt/reboot-into-windows
+Verify:
+ls -l /opt/reboot-into-windows
+The file should be owned by root and should not be writable by your normal user.
+
+4. Allow Passwordless Execution
+Create a dedicated sudoers rule.
+Replace YOUR_USERNAME with your Linux username:
+echo 'YOUR_USERNAME ALL=(ALL) NOPASSWD: /opt/reboot-into-windows' | sudo tee /etc/sudoers.d/00-windows-reboot > /dev/null
+Set the correct permissions:
+sudo chmod 440 /etc/sudoers.d/00-windows-reboot
+Validate the configuration:
+sudo visudo -cf /etc/sudoers.d/00-windows-reboot
+Expected:
+parsed OK
+Security Note
+Do not grant passwordless sudo access to all commands.
+The rule should only allow:
+/opt/reboot-into-windows
+Also ensure that only root can modify the script. Otherwise, a user who can modify the script could execute arbitrary commands as root.
+
+5. Test It
+Run:
+sudo /opt/reboot-into-windows
+The system should reboot and select Windows automatically.
+The Windows selection is one-time only. Subsequent boots should return to Ubuntu normally.
+6. Optional Desktop Shortcut
+Create a script on the desktop:
+nano ~/Desktop/Reboot-into-Windows
+Add:
+#!/bin/bash
+sudo /opt/reboot-into-windows
+Make it executable:
+chmod +x ~/Desktop/Reboot-into-Windows
+You can then launch it from the desktop to reboot directly into Windows.
+References
+Based on:
+Creating a "Reboot into Windows" Button in Ubuntu
+
