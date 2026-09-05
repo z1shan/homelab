@@ -42,7 +42,9 @@ pages:
                 name: zishan-main
                 mountpoints:
                   "/mnt/immichssf":
-                    name: Immich Storage
+                    name: 240GB - KINGSTON_A400
+                  "/":
+                    name: 128GB - SANDISK_SSDP_128G
           - type: repository
             repository: z1shan/Microsoft-Sentinel
             pull-requests-limit: 5
