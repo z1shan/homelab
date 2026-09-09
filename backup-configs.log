@@ -202,3 +202,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+/bin/sh: 1: /home/zishan/github/homelab/backup-configs.sh: not found
+/bin/sh: 1: /home/zishan/github/homelab/backup-configs.sh: not found
+/bin/sh: 1: /home/zishan/github/homelab/backup-configs.sh: not found
+/bin/sh: 1: /home/zishan/github/homelab/backup-configs.sh: not found
