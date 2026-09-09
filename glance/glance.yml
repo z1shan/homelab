@@ -42,9 +42,9 @@ pages:
                 name: zishan-main
                 mountpoints:
                   "/mnt/immichssf":
-                    name: 240GB - KINGSTON_A400
+                    name: KINGSTON_A400_240GB
                   "/":
-                    name: 128GB - SANDISK_SSDP_128G
+                    name: SANDISK_SSDP_128GB
           - type: repository
             repository: z1shan/Microsoft-Sentinel
             pull-requests-limit: 5
@@ -53,6 +53,15 @@ pages:
             show-thumbnails: true
       - size: full
         widgets:
+          - type: search
+            search-engine: google
+            bangs:
+              - title: YouTube
+                shortcut: "!yt"
+                url: https://www.youtube.com/results?search_query={QUERY}
+              - title: Google
+                shortcut: “!gg”
+                url: https://www.google.com/search?q={QUERY}
           - type: monitor
             title: Service Status
             sites:
@@ -75,6 +84,10 @@ pages:
               - title: Paperlessngx
                 url: http://192.168.10.2:8001
                 icon: si:paperlessngx
+                widgets:
+              - title: Home Assistant
+                url: http://192.168.10.2:8123
+                icon: si:homeassistant
                 widgets:
           - type: docker-containers
             containers:
@@ -114,10 +127,6 @@ pages:
             - url: https://isc.sans.edu/rssfeed.xml
               title: SANS ISC
               limit: 3
-          - type: group
-            widgets:
-              - type: hacker-news
-              - type: lobsters
       - size: small
         widgets:
           - type: calendar
