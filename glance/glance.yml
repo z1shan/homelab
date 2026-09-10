@@ -13,7 +13,6 @@ pages:
           - type: dns-stats
             service: pihole-v6
             url: http://192.168.10.2:8081
-            password: CHZff7wUJfAE1bJqskur3vU02Vvf3TFuugGFmnmknZw=
           - type: custom-api
             title: Immich stats
             cache: 1d
@@ -89,6 +88,10 @@ pages:
                 url: http://192.168.10.2:8123
                 icon: si:homeassistant
                 widgets:
+              - title: Frigate
+                url: http://192.168.10.2:5000
+                icon: si:frigate
+                widgets:
           - type: docker-containers
             containers:
             container_name_1:
@@ -137,16 +140,22 @@ pages:
                 links:
                   - title: Outlook
                     url: https://outlook.cloud.microsoft/
-                    icon: si:outlook
+                    icon: si:microsoftoutlook
+                  - title: Defender XDR
+                    url: https://security.microsoft.com/
+                    icon: mdi:shield-lock
                   - title: Azure Portal
                     url: https://portal.azure.com/
-                    icon: si:cloud
-                  - title: ECC - FreshService
-                    url: https://ec-council.freshservice.com/a/dashboard/default
-                    icon: si:itsm
+                    icon: si:microsoftazure
+                  - title: Entra ID
+                    url: https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview
+                    icon: mdi:account
                   - title: Office
                     url: https://office.com
-                    icon: si:office
+                    icon: si:microsoftoffice
+                  - title: ECC - FreshService
+                    url: https://ec-council.freshservice.com/a/dashboard/default
+                    icon: mdi:ticket-outline
               - title: AI
                 links:
                   - title: Claude
@@ -154,5 +163,5 @@ pages:
                     icon: si:claude
                   - title: ChatGPT
                     url: https://chat.com
-                    icon: si:chatgpt
+                    icon: si:openai
           - type: to-do
