@@ -66,32 +66,36 @@ pages:
             sites:
               - title: Glance
                 url: http://192.168.10.2:8099
-                icon: si:google
+                icon: sh:glance
               - title: Immich
                 url: http://192.168.10.2:2283
-                icon: si:immich
+                icon: sh:immich
               - title: Nginx Proxy Manager
                 url: http://192.168.10.2:81
-                icon: si:nginxproxymanager
+                icon: sh:nginx-proxy-manager
               - title: Pi-hole
                 url: http://192.168.10.2:8081/admin
-                icon: si:pihole
+                icon: sh:pi-hole
               - title: Beszel
                 url: http://192.168.10.2:8090
-                icon: si:statuspage
+                icon: sh:beszel
                 widgets:
               - title: Paperlessngx
                 url: http://192.168.10.2:8001
-                icon: si:paperlessngx
+                icon: sh:paperless-ngx
                 widgets:
               - title: Home Assistant
                 url: http://192.168.10.2:8123
-                icon: si:homeassistant
+                icon: sh:home-assistant
                 widgets:
               - title: Frigate
                 url: http://192.168.10.2:5000
                 icon: si:frigate
                 widgets:
+              - title: Securo
+                url: http://192.168.10.2:3000
+                icon: sh:securo
+                widgets: 
           - type: docker-containers
             containers:
             container_name_1:
@@ -140,19 +144,19 @@ pages:
                 links:
                   - title: Outlook
                     url: https://outlook.cloud.microsoft/
-                    icon: si:microsoftoutlook
+                    icon: sh:microsoft-outlook
                   - title: Defender XDR
                     url: https://security.microsoft.com/
-                    icon: mdi:shield-lock
+                    icon: sh:microsoft-defender
                   - title: Azure Portal
                     url: https://portal.azure.com/
-                    icon: si:microsoftazure
+                    icon: sh:microsoft-azure
                   - title: Entra ID
                     url: https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview
-                    icon: mdi:account
+                    icon: sh:microsoft-entra-id
                   - title: Office
                     url: https://office.com
-                    icon: si:microsoftoffice
+                    icon: sh:microsoft-365
                   - title: ECC - FreshService
                     url: https://ec-council.freshservice.com/a/dashboard/default
                     icon: mdi:ticket-outline
@@ -160,8 +164,8 @@ pages:
                 links:
                   - title: Claude
                     url: https://claude.com
-                    icon: si:claude
+                    icon: sh:claude
                   - title: ChatGPT
                     url: https://chat.com
-                    icon: si:openai
+                    icon: sh:chatgpt
           - type: to-do
